@@ -6,7 +6,7 @@ categories: jekyll update
 ---
 This is my first post in a blog powered by Jekyll.
 
-Beccause Jekyll offers powerful support for code snippets, let's test it with some JavaScript code:
+Because Jekyll offers powerful support for code snippets, let's test it with some JavaScript code:
 
 {% highlight javascript %}
 var findMax = function(a, b) {
