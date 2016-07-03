@@ -8,7 +8,7 @@ This is my first post in a blog powered by Jekyll.
 
 Because Jekyll offers powerful support for code snippets, let's test it with some JavaScript code:
 
-{% highlight javascript %}
+{% highlight js %}
 var findMax = function(a, b) {
   var max = a;
   if (b>a) {
