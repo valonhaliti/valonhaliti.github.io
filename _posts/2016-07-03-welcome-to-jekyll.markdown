@@ -9,12 +9,13 @@ This is my first post in a blog powered by Jekyll.
 Because Jekyll offers powerful support for code snippets, let's test it with some JavaScript code:
 
 {% highlight js %}
-var findMax = function(a, b) {
+function findMax(a, b) {
   var max = a;
   if (b>a) {
     max = b;
   }
   return max;
 }
+findMax(Math.E, 2); // 2.718281828459045
 {% endhighlight %}
 
