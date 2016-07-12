@@ -16,6 +16,6 @@ function findMax(a, b) {
   }
   return max;
 }
-findMax(Math.E, 2); // 2.718281828459045
+console.log(findMax(Math.E, 2)); // 2.718281828459045
 {% endhighlight %}
 
