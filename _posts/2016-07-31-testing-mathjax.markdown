@@ -5,7 +5,7 @@ date:   2016-07-31 12:19:41 +0200
 categories: jekyll update
 ---
 
-Let $x$ be an arbitrary real number, then, there exists $k$ such that $\left|x\right|<k$. 
+Let $x$ be an arbitrary real number, then, there exists $k$ such that \[ x\]. 
 
 From this we get:
 
