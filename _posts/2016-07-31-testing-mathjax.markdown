@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Prove that x^n/n! goest to zero when n goes to infinity$"
+title:  "Prove that x^n/n! goes to zero when n goes to infinity"
 date:   2016-07-31 12:19:41 +0200
 categories: jekyll update
 ---
@@ -27,11 +27,11 @@ $$ \lim_{n \to \infty} \frac{x^k}{k!}\frac{1}{n} = 0 $$
 
 From squeze theorem
 
-$$ 0 < \| \frac{x^n}{n!} \| < \lim_{n \to \infty} \frac{x^k}{k!}\frac{1}{n} $$
+$$ 0 < \left| \frac{x^n}{n!} \right| < \lim_{n \to \infty} \frac{x^k}{k!}\frac{1}{n} $$
 
 We get that 
 
-$$ \lim{n \to \infty} \| \frac{x^n}{n!} \| = 0$$
+$$ \lim{n \to \infty}  \left| \frac{x^n}{n!} \right| = 0$$
 
 we can conlude that:
 
