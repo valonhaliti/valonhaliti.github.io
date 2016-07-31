@@ -9,4 +9,11 @@ Let $x$ be an arbitrary real number, then, there exists $k$ such that $|x|<k$. F
 $$ |x||x|\dots |x| = |x|^{n-k} < k(k+1)\dots (n-1)$$
 (Because if $|x| < k \Rightarrow |x|< k+1, \ldots |x|< (n-1)$
 Now, 
-$$ \lim_{n \to \infty} \frac{x^n}{n!}= \lim_{n \to \infty}\frac{x^{n-k}x^k}{k!(k+1)\dots (n-1)n} $$
+\begin{align*} 
+  \lim_{n \to \infty} \frac{x^n}{n!} &= \lim_{n \to \infty}\frac{x^{n-k}x^k}{k!(k+1)\dots (n-1)n} \\
+                                     &< \lim_{n \to \infty} \frac{x^k k(k+1)\dots (n-1)}{k!(k+1)\dots (n-1)n} \\
+                                     &= \lim_{n \to \infty} \frac{x^k}{k!}\frac{1}{n}
+\end{align*}  
+Now,because $\frac{x^k}{k!}$ is just a constant,
+$$ \lim_{n \to \infty} \frac{x^k}{k!}\frac{1}{n} = 0 $$
+From squeze theorem
