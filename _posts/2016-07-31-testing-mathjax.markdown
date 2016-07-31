@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Prove that \lim_{n \to\ infty}\frac{x^n}{n!}=$"
+title:  "Prove tht"
 date:   2016-07-31 12:19:41 +0200
 categories: jekyll update
 ---
