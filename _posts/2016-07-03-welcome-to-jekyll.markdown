@@ -11,7 +11,7 @@ Because Jekyll offers powerful support for code snippets, let's test it with som
 {% highlight js %}
 function findMax(a, b) {
   var max = a;
-  if (b>a) {
+  if (b > a) {
     max = b;
   }
   return max;
