@@ -6,16 +6,14 @@ categories: jekyll update
 ---
 This is my first post in a blog powered by Jekyll.
 
-Because Jekyll offers powerful support for code snippets, let's test it with some JavaScript code:
+Because Jekyll offers powerful support for code snippets, let's test it with some Erlang code:
 
-{% highlight js %}
-function findMax(a, b) {
-  var max = a;
-  if (b > a) {
-    max = b;
-  }
-  return max;
-}
-console.log(findMax(Math.E, 2)); // 2.718281828459045
+{% highlight erlang %}
+-module(fib).
+-export([fib/1]).
+
+fib(1) -> 1;
+fib(2) -> 1;
+fib(n) -> fib(n - 1) + fib(n - 2).
 {% endhighlight %}
 
