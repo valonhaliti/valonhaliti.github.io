@@ -16,4 +16,4 @@ My first approach to such students is to tell them that their unhappiness is a r
 
 That has been the advice that has been most effective. One of my students tried charity for a local church; he helped prepare food and served it for poor people. He only spent a few hours per week at it, but he told me it changed his life.  For a reason he didn't really understand, he had stopped being so concerned about the meaning of life.”
 
-[Link](https://www.quora.com/Why-is-it-wrong-to-think-only-of-yourself)
+[Link of the answer in Quora](https://www.quora.com/Why-is-it-wrong-to-think-only-of-yourself)
