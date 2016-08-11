@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  Why you should stop thinking only on yourself.
+title:  Why you should stop thinking only on yourself
 date:   2016-08-11 15:47:41 +0200
 categories: life
 ---
 
-On Quora someone asked _Why is it wrong to think only of yourself?_, and here's what professor Richard Muller had to say:
+On Quora someone asked _Why is it wrong to think only of yourself?_, and because I liked an answer given by profesor Richard Muller very, very much I had to share this one with you, here's what professor Richard Muller had to say about this topic:
 
 
 “It's not "wrong".  But when you do that, you deprive yourself of the greatest joys in life.  
