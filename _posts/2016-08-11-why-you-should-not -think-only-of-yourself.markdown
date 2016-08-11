@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Why you should stop thinking only on yourself
+title:  Why you should stop thinking only of yourself
 date:   2016-08-11 15:47:41 +0200
 categories: life
 ---
