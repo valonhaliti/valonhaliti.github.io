@@ -12,7 +12,7 @@
 .nav-main-menu li:last-child {
     border-right: none;
 }
-.navbar-default .navbar-nav>li>a, .navbar-default .navbar-nav>li>a:focus, .visit-button, .visit-button:hover, .visit-button:focus {
+.navbar-default .navbar-nav>li>a, .navbar-default .navbar-nav>li>a:focus, .visit-button, .visit-button:hover, .visit-button:focus, .form-control  {
     color: white;
 }
 .navbar-default .navbar-toggle {
@@ -25,7 +25,7 @@
 .navbar-default .navbar-toggle .icon-bar {
     background: white;
 }
-.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover, .contact-button {
     background-color: #67b168;
 }
 section {
@@ -61,7 +61,8 @@ section h1 {
     font-family: 'Roboto', sans-serif;
 }
 
-.portfolio h1 {
+.portfolio h1, div.skills h1 {
+    text-align: center;
     color: #b93c5a;
 }
 .thumbnail img {
@@ -71,88 +72,98 @@ section h1 {
     height: 70px
 }
 .visit-button {
-    background-color: #b93c5a;
+        background-color: #b93c5a;
 }
-
-
 #about {
+    padding-bottom: 40px;
     color: white;
     background-color: #313131;
 }
-
-/**************************
-  DEFAULT BOOTSTRAP STYLES
-**************************/
-
-.btn {
-    display: inline-block;
-    padding: 6px 12px;
-    margin-bottom: 0;
-    font-size: 14px;
-    font-weight: normal;
-    line-height: 1.42857143;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    background-image: none;
-    border: 1px solid transparent;
-    border-radius: 4px;
-    padding: 10px 16px;
+.form-control {
+    background-color: transparent;
 }
-
-.btn-lg {
-    font-size: 18px;
-    line-height: 1.33;
-    border-radius: 6px;
-}
-
-.btn-primary {
-    color: #fff;
-    background-color: #67b168;
-    border-color: #67b168;
-}
-
-.btn-primary:hover,
-.btn-primary:focus,
-.btn-primary:active,
-.btn-primary.active,
-.open .dropdown-toggle.btn-primary {
-    color: #fff;
-    background-color: #67b168;
-    border-color: #67b168;
-}
-
-/***********************
-  OUTLINE BUTTONS
-************************/
-
-.btn.outline {
-    background: none;
-    padding: 12px 22px;
-}
-.btn-primary.outline {
-    border: 2px solid #67b168;
-    color: #67b168;
-}
-.btn-primary.outline:hover, .btn-primary.outline:focus, .btn-primary.outline:active, .btn-primary.outline.active, .open > .dropdown-toggle.btn-primary {
-    color: #67b168;
-    border-color: #67b168;
-}
-.btn-primary.outline:active, .btn-primary.outline.active {
-    border-color: #67b168;
-    color: #67b168;
+.contact-button {
     box-shadow: none;
+    transition: box-shadow 1s;
+}
+.contact-button:hover, .contact-button:focus {
+    -webkit-box-shadow: 1px -5px 32px 0px rgba(255,255,255,1);
+    -moz-box-shadow: 1px -5px 32px 0px rgba(255,255,255,1);
+    box-shadow: 1px -5px 32px 0px rgba(255,255,255,1);
+    color: white;
+    outline: none;
 }
 
-/***********************
-  COSTUM BTN VALUES
-************************/
 
-.btn:focus, .btn:active:focus, .btn.active:focus {
-    outline: 0 none;
+
+.skillbar {
+    position:relative;
+    display:block;
+    margin-bottom:15px;
+    width:100%;
+    background:#eee;
+    height:35px;
+    border-radius:3px;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+    -webkit-transition:0.4s linear;
+    -moz-transition:0.4s linear;
+    -ms-transition:0.4s linear;
+    -o-transition:0.4s linear;
+    transition:0.4s linear;
+    -webkit-transition-property:width, background-color;
+    -moz-transition-property:width, background-color;
+    -ms-transition-property:width, background-color;
+    -o-transition-property:width, background-color;
+    transition-property:width, background-color;
+}
+
+.skillbar-title {
+    position:absolute;
+    top:0;
+    left:0;
+    font-weight:bold;
+    font-size:13px;
+    color:#fff;
+    background:#6adcfa;
+    -webkit-border-top-left-radius:3px;
+    -webkit-border-bottom-left-radius:4px;
+    -moz-border-radius-topleft:3px;
+    -moz-border-radius-bottomleft:3px;
+    border-top-left-radius:3px;
+    border-bottom-left-radius:3px;
+}
+
+.skillbar-title span {
+    display:block;
+    background:rgba(0, 0, 0, 0.1);
+    padding:0 20px;
+    height:35px;
+    line-height:35px;
+    -webkit-border-top-left-radius:3px;
+    -webkit-border-bottom-left-radius:3px;
+    -moz-border-radius-topleft:3px;
+    -moz-border-radius-bottomleft:3px;
+    border-top-left-radius:3px;
+    border-bottom-left-radius:3px;
+}
+
+.skillbar-bar {
+    height:35px;
+    width:0px;
+    background:#6adcfa;
+    border-radius:3px;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+}
+
+.skill-bar-percent {
+    position:absolute;
+    right:10px;
+    top:0;
+    font-size:11px;
+    height:35px;
+    line-height:35px;
+    color:#444;
+    color:rgba(0, 0, 0, 0.4);
 }
