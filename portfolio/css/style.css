@@ -1,0 +1,66 @@
+/*
+    Green: #b93c5a
+    Red: #d93a33
+*/
+
+.navbar-default {
+    background-color: #b93c5a;
+    background-image: linear-gradient(26deg,#f05556,#b93c5a 50%);
+    border: none;
+    border-radius: 0;
+    margin-bottom: 0;
+}
+.navbar-default .navbar-brand, .navbar-default .navbar-brand:hover {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+.nav-main-menu li:last-child {
+    border-right: none;
+}
+.navbar-default .navbar-nav>li>a, .navbar-default .navbar-nav>li>a:focus {
+    color: white;
+}
+.navbar-default .navbar-toggle {
+    border-color: white;
+}
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:active {
+    color: white;
+    text-decoration: underline;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background: white;
+}
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+    background-color: #67b168;
+}
+section {
+    color: white;
+    background: url("https://www.technohacker.com/wp-content/uploads/2016/07/MacBook-Coffee.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height:  560px;
+}
+.bg-overlay {
+    background: rgba(0, 0, 0, 0.64);
+}
+.hero {
+    position: relative;
+    display: table;
+    box-sizing: border-box;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    padding: 20px;
+}
+.hero-body {
+    position: relative;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    text-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+section h1 {
+    font-size: 50px;
+}
