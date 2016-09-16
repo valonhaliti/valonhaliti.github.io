@@ -64,3 +64,7 @@ section {
 section h1 {
     font-size: 50px;
 }
+
+.portfolio h1 {
+    color: #b93c5a;
+}
