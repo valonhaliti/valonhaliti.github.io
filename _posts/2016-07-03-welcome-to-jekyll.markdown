@@ -6,7 +6,7 @@ categories: jekyll update
 ---
 This is my first post in a blog powered by Jekyll.
 
-Because Jekyll offers powerful support for code snippets, let's test it with some Erlang code: ☺
+Because Jekyll offers powerful support for code snippets, let's test it with some Erlang code:
 
 {% highlight erlang %}
 -module(fib).
