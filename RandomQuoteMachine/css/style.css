@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+}
+html {
+    height: 100%;
+}
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+/* optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: #FF0000;
+}
+body {
+    min-height: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+body {
+    background: -moz-linear-gradient(89deg, rgba(255,99,149,1) 0%, rgba(255,99,149,1) 1%, rgba(114,8,128,1) 99%, rgba(114,8,128,1) 100%) no-repeat center center fixed; /* ff3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(114,8,128,1)), color-stop(1%, rgba(114,8,128,1)), color-stop(99%, rgba(255,99,149,1)), color-stop(100%, rgba(255,99,149,1))) no-repeat center center fixed; /* safari4+,chrome */
+    background: -webkit-linear-gradient(89deg, rgba(255,99,149,1) 0%, rgba(255,99,149,1) 1%, rgba(114,8,128,1) 99%, rgba(114,8,128,1) 100%) no-repeat center center fixed; /* safari5.1+,chrome10+ */
+    background: -o-linear-gradient(89deg, rgba(255,99,149,1) 0%, rgba(255,99,149,1) 1%, rgba(114,8,128,1) 99%, rgba(114,8,128,1) 100%) no-repeat center center fixed; /* opera 11.10+ */
+    background: -ms-linear-gradient(89deg, rgba(255,99,149,1) 0%, rgba(255,99,149,1) 1%, rgba(114,8,128,1) 99%, rgba(114,8,128,1) 100%) no-repeat center center fixed; /* ie10+ */
+    background: linear-gradient(1deg, rgba(255,99,149,1) 0%, rgba(255,99,149,1) 1%, rgba(114,8,128,1) 99%, rgba(114,8,128,1) 100%) no-repeat center center fixed; /* w3c */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#720880', endColorstr='#FF6395',GradientType=0 ) ; /* ie6-9 */
+}
+.jumbotron {
+    margin-top: 5%;
+    background: -moz-linear-gradient(45deg, rgba(255,99,149,1) 0%, rgba(114,8,128,1) 100%); /* ff3.6+ */
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, rgba(255,99,149,1)), color-stop(100%, rgba(114,8,128,1))); /* safari4+,chrome */
+    background: -webkit-linear-gradient(45deg, rgba(255,99,149,1) 0%, rgba(114,8,128,1) 100%); /* safari5.1+,chrome10+ */
+    background: -o-linear-gradient(45deg, rgba(255,99,149,1) 0%, rgba(114,8,128,1) 100%); /* opera 11.10+ */
+    background: -ms-linear-gradient(45deg, rgba(255,99,149,1) 0%, rgba(114,8,128,1) 100%); /* ie10+ */
+    background: linear-gradient(45deg, rgba(255,99,149,1) 0%, rgba(114,8,128,1) 100%); /* w3c */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#720880', endColorstr='#FF6395',GradientType=1 ); /* ie6-9 */
+    color: white;
+}
+.jumbotron::before {
+    content: "\201C"; /*Unicode for Left Double Quote*/
+
+    /*Font*/
+    font-family: 'Slabo 27px', serif;
+    font-size: 60px;
+    font-weight: bold;
+    color: #ffffff;
+
+    /*Positioning*/
+    position: absolute;
+    left: 20px;
+    top: 48px;
+}
+.jumbotron::after {
+    /*Reset to make sure*/
+    content: "";
+}
+
+.btn {
+    /*padding: 100px;*/
+    border-radius: 2px;
+    border-color: white;
+    background: -moz-linear-gradient(45deg, rgba(153,52,89,1) 0%, rgba(54,12,19,1) 100%); /* ff3.6+ */
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, rgba(153,52,89,1)), color-stop(100%, rgba(54,12,19,1))); /* safari4+,chrome */
+    background: -webkit-linear-gradient(45deg, rgba(153,52,89,1) 0%, rgba(54,12,19,1) 100%); /* safari5.1+,chrome10+ */
+    background: -o-linear-gradient(45deg, rgba(153,52,89,1) 0%, rgba(54,12,19,1) 100%); /* opera 11.10+ */
+    background: -ms-linear-gradient(45deg, rgba(153,52,89,1) 0%, rgba(54,12,19,1) 100%); /* ie10+ */
+    background: linear-gradient(45deg, rgba(153,52,89,1) 0%, rgba(54,12,19,1) 100%); /* w3c */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#360C13', endColorstr='#993459',GradientType=1 ); /* ie6-9 */
+
+    color: white;
+}
+
+@media (min-width: 768px) {
+    .container-small {
+        width: 300px;
+    }
+    .container-large {
+        width: 970px;
+    }
+}
+@media (min-width: 992px) {
+    .container-small {
+        width: 500px;
+    }
+    .container-large {
+        width: 1170px;
+    }
+}
+@media (min-width: 1200px) {
+    .container-small {
+        width: 700px;
+    }
+    .container-large {
+        width: 1500px;
+    }
+}
+
+.container-small, .container-large {
+    max-width: 100%;
+}
