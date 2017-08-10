@@ -57,8 +57,8 @@ body {
 
     /*Positioning*/
     position: absolute;
-    left: 20px;
-    top: 48px;
+    left: 18px;
+    top: 16px;
 }
 .jumbotron::after {
     /*Reset to make sure*/
@@ -78,6 +78,26 @@ body {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#360C13', endColorstr='#993459',GradientType=1 ); /* ie6-9 */
 
     color: white;
+}
+@media (min-width: 575px) {
+    .jumbotron::before {
+        content: "\201C"; /*Unicode for Left Double Quote*/
+
+        /*Font*/
+        font-family: 'Slabo 27px', serif;
+        font-size: 60px;
+        font-weight: bold;
+        color: #ffffff;
+
+        /*Positioning*/
+        position: absolute;
+        left: 20px;
+        top: 48px;
+    }
+    .jumbotron::after {
+        /*Reset to make sure*/
+        content: "";
+    }
 }
 
 @media (min-width: 768px) {
