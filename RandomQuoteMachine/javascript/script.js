@@ -12,7 +12,6 @@ $(function() {
                     $(this).text("- "+ post.title).fadeIn();
                 });
                 $('#quote-content').fadeOut('slow', function () {
-                    console.log($(this));
                     $(this).html(post.content).fadeIn()
                 });
 
