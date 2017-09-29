@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
         let el = document.getElementById("search-results");
         const xhr = new XMLHttpRequest();
         const link = 'https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch='
-            + encodeURIComponent(document.getElementById('search-field').value) +'&format=json';
+            + encodeURIComponent(document.getElementById('search-field').value) +'&origin=*&format=json';
 
         xhr.open('GET', link, true);
         xhr.onload = function () {
