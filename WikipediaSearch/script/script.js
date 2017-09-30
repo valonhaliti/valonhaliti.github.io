@@ -1,37 +1,50 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Search things from Wikipedia.">
-    <meta name="keywords" content="wikipedia, search">
-    <meta name="author" content="Valon Haliti, Zanita Rahimi">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-    <link rel="stylesheet" href="style/style.css"/>
-    <link href="https://fonts.googleapis.com/css?family=Crushed" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Pontano+Sans" rel="stylesheet">
-    <title>Wikipedia Search</title>
-</head>
+document.addEventListener("DOMContentLoaded", function() {
+    // document is ready
 
-<body>
-<div class="container">
+    document.getElementById('getForm').addEventListener('submit', getWikipediaArticles);
 
-    <div class="centered-text padding-top" id="header">
-        <h1 id="title-page">Wikipedia Search</h1>
-        <form id="getForm">
-            <input type="text" name="Search" id="search-field" placeholder="Search...">
-        </form>
-        <a id="random-link" href="https://en.wikipedia.org/wiki/Special:Random">Random link</a>
-    </div>
+    function getWikipediaArticles(e) {
+        e.preventDefault();
+        let el = document.getElementById("search-results");
+        const xhr = new XMLHttpRequest();
+        const link = 'https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch='
+            + encodeURIComponent(document.getElementById('search-field').value) +'&origin=*&format=json';
 
-    <div id="search-results">
-    </div>
+        xhr.open('GET', link, true);
+        xhr.onload = function () {
+            if (this.status === 200) {
+                const users = JSON.parse(this.responseText).query.search;
+                let output = "";
+                for (let i in users) {
+                    output += '<div class="article">'
+                        + '<h3><a href="http://en.wikipedia.org/?curid=' + users[i].pageid+'">'+
+                        users[i].title +'</a></h3>';
+                    output += "<p>" + users[i].snippet +"</p></div>";
 
-</div>
-</body>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
-<script src="script/script.js"></script>
-</html>
+                }
+                document.getElementById('search-results').innerHTML = output;
+            }
+        };
+        fadeIn(el);
+        xhr.send();
+    }
+
+    document.getElementById('getForm').addEventListener('focus', removePadding, true);
+    function removePadding() {
+        document.getElementById('header').classList.remove('padding-top');
+    }
+
+});
+
+function fadeIn(el) {
+    el.style.opacity = 0;
+
+    let tick = function() {
+        el.style.opacity = +el.style.opacity + 0.02;
+
+        if (+el.style.opacity < 1) {
+            (window.requestAnimationFrame && requestAnimationFrame(tick)) || setTimeout(tick, 16)
+        }
+    };
+    tick();
+}
