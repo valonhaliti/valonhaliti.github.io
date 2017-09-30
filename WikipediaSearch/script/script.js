@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // document is ready
 
     document.getElementById('getForm').addEventListener('submit', getWikipediaArticles);
-    
+
     function getWikipediaArticles(e) {
         e.preventDefault();
         let el = document.getElementById("search-results");
@@ -17,8 +17,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 let output = "";
                 for (let i in users) {
                     output += '<div class="article">'
-                            + '<h3><a href="http://en.wikipedia.org/?curid=' + users[i].pageid+'">'+
-                                users[i].title +'</a></h3>';
+                        + '<h3><a href="http://en.wikipedia.org/?curid=' + users[i].pageid+'">'+
+                        users[i].title +'</a></h3>';
                     output += "<p>" + users[i].snippet +"</p></div>";
 
                 }
@@ -28,6 +28,12 @@ document.addEventListener("DOMContentLoaded", function() {
         fadeIn(el);
         xhr.send();
     }
+
+    document.getElementById('getForm').addEventListener('focus', removePadding, true);
+    function removePadding() {
+        document.getElementById('header').classList.remove('padding-top');
+    }
+
 });
 
 function fadeIn(el) {
