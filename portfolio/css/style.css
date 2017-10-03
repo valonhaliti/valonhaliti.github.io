@@ -30,7 +30,7 @@
 }
 section {
     color: white;
-    background: url("https://www.technohacker.com/wp-content/uploads/2016/07/MacBook-Coffee.jpg") no-repeat center center fixed;
+    background: url(../img/background.png) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
